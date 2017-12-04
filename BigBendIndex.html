@@ -53,15 +53,18 @@
       var template = new InfoTemplate();
       template.setTitle("<b>${TRLNAME}</br>");
       template.setContent("${TRLNAME} is ${Miles} long.");
-      var featureLayer = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0",
+      var trails = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0",
       {
       mode: FeatureLayer.MODE_ONDEMAND,
       infoTemplate: template,
       outFields: ["TRLNAME", "Miles"]                   
 		        });
       
+	 var campsites = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Primitive_Campsite/FeatureServer/0")
 
-    map.addLayer(featureLayer);
+
+    map.addLayer(trails);
+	 map.addLayer(campsites);
 
   });
   </script>

@@ -53,6 +53,16 @@
       basemapGallery.on("error", function(msg) {
         console.log("basemap gallery error:  ", msg);
       });
+	       var template = new InfoTemplate();
+      template.setTitle("<b>${TRLNAME}</br>");
+      template.setContent("${TRLNAME} is ${Miles} long.");
+      
+      var featureLayer = new FeatureLayer ("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0", {
+      mode: FeatureLayer.MODE_ONDEMAND,
+      infoTemplate:template,
+      outFields: ["TRLNAME", "Miles"]
+      });
+      map.addLayer(featureLayer)
     });
   </script>
     </head>

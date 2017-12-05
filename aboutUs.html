@@ -8,117 +8,50 @@
         <title>Big Bend National Park: The Right Hike for You</title>
         <!--<h2 class="Title" align="center">Big Bend National Park: The Right Hike for You </h2>
 			<!--GEO 4422/5408 Web Mapping, Author: Kenneth Gustafson, 11/21/2017-->     
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
-  <title>Basemap gallery</title>
-  <link rel="stylesheet" href="https://js.arcgis.com/3.22/dijit/themes/claro/claro.css">    
-  <link rel="stylesheet" href="https://js.arcgis.com/3.22/esri/css/esri.css">
-  <style> 
-    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
-    #map{
-      padding:0;
-    }
-  </style> 
-  <script>var dojoConfig = { parseOnLoad:true };</script>
-  <script src="https://js.arcgis.com/3.22/"></script>
-  <script> 
- require([
-    "esri/map",
-    "esri/layers/FeatureLayer",
-    "esri/dijit/BasemapGallery",
-    "esri/arcgis/utils",
-    "esri/InfoTemplate",
-    "dojo/domReady!"
-  ],
-  function(
-    Map,
-    FeatureLayer, BasemapGallery, arcgisUtils, InfoTemplate
-  ) {
-	
-     var map = new Map("map", {
-        basemap: "topo",
-        center: [-103.20, 29.23],
-        zoom: 10
-      });
-      var basemapGallery = new BasemapGallery({
-        showArcGISBasemaps: true,
-        map: map
-      }, "basemapGallery");
-      basemapGallery.startup();
-      
-      basemapGallery.on("error", function(msg) {
-        console.log("basemap gallery error:  ", msg);
-      });
-      var template = new InfoTemplate();
-      template.setTitle("<b>${TRLNAME}</br>");
-      template.setContent("${TRLNAME} is ${Miles} long.");
-      var trails = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0",
-      {
-      mode: FeatureLayer.MODE_ONDEMAND,
-      infoTemplate: template,
-      outFields: ["TRLNAME", "Miles"]                   
-		        });
-      
-	 var campsites = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Primitive_Campsite/FeatureServer/0")
-    map.addLayer(trails);
-	 map.addLayer(campsites);
-  });
-  </script>
     </head>
     <body>
-
-				<!-- Top Navigation -->
+    					<!-- Top Navigation -->
        	<div id="topnavigation" align="center">
-  		<!-- The logo isn't working right now
-  		<div class= "logo">
-			<img src= "https://i.pinimg.com/originals/f9/81/b1/f981b1277a816d63943bca0a48e02f6b.png">
-		</div>     		
-		-->
 		<nav>
 			<p><a href="bigBendIndex.html">Home</a>
 		       <!--<a href="https://www.txstate.edu">Trails</a>
 			   <a href="https://www.geo.txstate.edu">About Us</a></p> -->
 		</nav>
 		</div>
+		<div id="content" align="center">
+		<table>
+			<P>About Us</p><br>
+				<p>Timmy Szpakowski<br>
+					<br><!--picture-->
+					I am Timmy Szpakowski I am working formy GIS certificate. I have graduated witha B.S. in Physical Geogrophy and a minor in Geology.
+				</p>
+				<p>Ben Griffith<br>
+					<br><!--picture-->
+					<!--put bio-->
+				</p>
+				<p>Kelly Baker<br>
+					<br><!--picture-->
+					<!--put bio-->
+				</p>
+				<p>Anne Gilligan<br>
+					<br><!--picture-->
+					<!--put bio-->
+				</p>
+				<p>Kenny Gustafson<br>
+					<br><!--picture-->
+					<!--put bio-->
+				</p>
+		</table>
+		</div>
 						<!-- Left Navigation -->
 		<nav>
 				<div class="leftnav">
 				<br />
 				<br />
-				<h2><strong>About Big Bend</strong></h2> <!--Add website info, or big bend info here?-->
-				<br />
 				<h2><strong>Trails</strong></h2>
 				</div>
 			</nav>
-		<nav>
-	<div class="content">
-	<body class="claro"> 
-  	<div data-dojo-type="dijit/layout/BorderContainer" 
-       data-dojo-props="design:'headline', gutters:false" 
-       style="width:100%;height:100%;margin:0;">
-
-    <div id="map" 
-         data-dojo-type="dijit/layout/ContentPane" 
-         data-dojo-props="region:'center'" 
-         style="padding:0; height: 100%;">
-
-      <div style="position:absolute; right:20px; top:10px; z-Index:999;">
-        <div data-dojo-type="dijit/TitlePane" 
-             data-dojo-props="title:'Switch Basemap', open:false">
-          <div data-dojo-type="dijit/layout/ContentPane" style="width:280px; height:100%; overflow:auto;">
-            <div id="basemapGallery"> </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</body> 
-
-			</div>
-		</nav>
-		
 						<!-- Bottom Navigation -->		
 		<nav>
 		<div class="bottomnavigation">
@@ -135,5 +68,12 @@
 				document.write(d);
 			</script></p>
 		</div>
+	
+		<!--<script src="externaldate.js">
+		var d = new Date(99,5,24,11,33,30,0);
+		document.getElementById("externaldate.js").innerHTML = d;
+		</script>-->
+		
+			
 	</body>
 </html>

@@ -59,6 +59,14 @@
       infoTemplate: template,
       outFields: ["TRLNAME", "Miles"]                   
 		        });
+	var VisitorCenters = FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Visitor_Centers/FeatureServer/0")
+	  map.addLayer(VisitorCenters)
+	 var Boundaries = FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Park_Boundaries/FeatureServer/0")
+	 map.addLayer(Boundaries)
+	 var Roads = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Roads/FeatureServer/0")
+	map.addLayer(Roads);
+      var campgrounds = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Campground/FeatureServer/0")
+      map.addLayer(campgrounds);
       
 	 var campsites = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Primitive_Campsite/FeatureServer/0")
 

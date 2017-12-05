@@ -20,7 +20,7 @@
       padding:0;
     }
   </style> 
-  
+  <script>var dojoConfig = { parseOnLoad:true };</script>
   <script src="https://js.arcgis.com/3.22/"></script>
   <script> 
  require([
@@ -108,7 +108,7 @@
 
       <div style="position:absolute; right:20px; top:10px; z-Index:999;">
         <div data-dojo-type="dijit/TitlePane" 
-             data-dojo-props="title:'Switch Basemap', open:true">
+             data-dojo-props="title:'Switch Basemap', open:false">
           <div data-dojo-type="dijit/layout/ContentPane" style="width:280px; height:100%; overflow:auto;">
             <div id="basemapGallery"> </div>
           </div>

@@ -49,7 +49,7 @@ require([
                 //Initiate Map 
          var map = new Map("map", {
         basemap: "topo",
-        center: [-103.20, 29.23],
+        center: [-103.20, 29.50],
         zoom: 10
       });
                 

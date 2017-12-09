@@ -55,6 +55,15 @@ body {
 	border: 3px solid black;
 	
 }
+.elevationProfile {
+	z-index: 0;
+	position: absolute;
+	right: 15%;
+	width: 65%;
+	height: 45%;
+	border: 6px solid black;
+}
+
 	.bottomnavigation {
 	text-align: center;
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;

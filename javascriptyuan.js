@@ -1,5 +1,5 @@
-//	* Geo5408 Group Project 2016
-// 	* Matthew Washburn, Saeideh Gharehchahi, Kevin Schilly, Laura Brown
+//	* Geo4422/5408 Big Bend Webmapping Project 2017
+// 	* Kenneth Gustafson, Ben , Anne , Kelly, Timmy 
 
 //Initiate and load modules
 require([         
@@ -57,7 +57,7 @@ require([
       basemapGallery.on("error", function(msg) {
         console.log("basemap gallery error:  ", msg);
       });
-//legend     
+     
     var legend = new Legend({
       map: map,
          }, "legendDiv");

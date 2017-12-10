@@ -48,7 +48,6 @@ require([
         center: [-103.20, 29.32],
         zoom: 10
       });
-   
          var basemapGallery = new BasemapGallery({
         showArcGISBasemaps: true,
         map: map
@@ -58,7 +57,11 @@ require([
       basemapGallery.on("error", function(msg) {
         console.log("basemap gallery error:  ", msg);
       });
-	
+//legend     
+    var legend = new Legend({
+      map: map,
+         }, "legendDiv");
+legend.startup(); 
 
 
 //create trails infotemplate
@@ -192,5 +195,5 @@ require([
                         epWidget.set("measureUnits", val);
                     }
                 }
-
-            });
+               
+             });

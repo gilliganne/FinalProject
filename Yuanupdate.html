@@ -24,7 +24,7 @@
  		<script src="https://js.arcgis.com/3.22/"></script>
   		<script type="text/javascript" src="javascriptyuan.js"></script>
   	</head>
- 	<body>
+<body>
 			<!-- Top Navigation -->
        	<div id="topnavigation" align="center">
   		<!-- The logo isn't working right now
@@ -62,9 +62,15 @@
                     	        <br/>
                 	            <button id="off">Cancel Draw</button>
              	</div>
+             	
             </div>
+            
 		</nav>
+
+			
+		
 		<nav>
+			
 			<div class="content">
 				<body class="claro"> 
   					<div data-dojo-type="dijit/layout/BorderContainer" 
@@ -80,6 +86,7 @@
              					data-dojo-props="title:'Switch Basemap', open:false">
           					<div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
             	<div id="basemapGallery"> </div>
+            
           					</div>
         					</div>
       					</div>
@@ -92,5 +99,11 @@
     			<div data-dojo-type="dijit/layout/ContentPane" title="Elevation" style="background-color: #f0e5d3;">
                 </div>
 					</div>
+						<!-- Legend -->
+						<div style="position:absolute; right:0px; top:30px; z-Index:999;">
+       						<div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Legend', open:false">
+          					<div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
+					<div id="legendDiv"> </div>
+				</div>
 	</body>	
 </html>

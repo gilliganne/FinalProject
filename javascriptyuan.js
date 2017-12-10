@@ -1,5 +1,5 @@
 //	* Geo4422/5408 Big Bend Webmapping Project 2017
-// 	* Kenneth Gustafson, Ben , Anne , Kelly, Timmy 
+// 	* Kenneth Gustafson, Benjamin Griffith, Anne , Kelly, Timmy 
 
 //Initiate and load modules
 require([         

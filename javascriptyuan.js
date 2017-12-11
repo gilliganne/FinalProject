@@ -163,7 +163,7 @@ legend.startup();
                         chartOptions: chartOptions,
                         profileTaskUrl: "http://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer/Profile/execute",
                                         
-                        scalebarUnits: Units.KILOMETERS
+                        scalebarUnits: Units.MILES
                     };
 					
 					//Initialize elevation profile widget

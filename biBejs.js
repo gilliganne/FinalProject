@@ -1,4 +1,5 @@
 
+
 //	* Geo4422/5408 Big Bend Webmapping Project 2017
 // 	* Kenneth Gustafson, Benjamin Griffith, Anne Gilligan, Kelly Baker, Timmy Szpakowski
 
@@ -51,6 +52,8 @@ require([
         center: [-103.20, 29.5],
         zoom: 10
       });
+      
+      //Search Trails Feature
       var search = new Search({
       	sources: [{
       		featureLayer: new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0", {
@@ -67,6 +70,8 @@ require([
       	map:map
       }, "search");
       search.startup();
+      
+      //Basemap Gallery 
          var basemapGallery = new BasemapGallery({
         showArcGISBasemaps: true,
         map: map
@@ -206,8 +211,4 @@ legend.startup();
                     tb.activate(toolName);
                     map.disableMapNavigation();
                 }
-				
-				
-                   
-               
              });

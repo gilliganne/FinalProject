@@ -148,7 +148,14 @@ legend.startup();
                         CartographicLineSymbol.CAP_ROUND,
                         CartographicLineSymbol.JOIN_MITER, 2
                     );       
-					
+		   //allows selected features to be input into elevation profile    
+			trailsFeat.on("click", function(evt){
+	                   var geo = evt.graphic.geometry;
+				console.log(geo);
+				epWidget.set("measureUnits", "MILES");
+				epWidget.set("profileGeometry", geo);
+			
+			});		
 					//Define visual parameters for profile graph
                     var chartOptions = {
                         titleFontColor: "black",

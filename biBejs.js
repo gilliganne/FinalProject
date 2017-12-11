@@ -1,5 +1,3 @@
-
-
 //	* Geo4422/5408 Big Bend Webmapping Project 2017
 // 	* Kenneth Gustafson, Benjamin Griffith, Anne Gilligan, Kelly Baker, Timmy Szpakowski
 
@@ -70,6 +68,24 @@ require([
       	map:map
       }, "search");
       search.startup();
+      
+      //Search Campsites Feature
+         var searchC = new Search({
+      	sources: [{
+      		featureLayer: new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/BIBE_Primitive_Campsite/FeatureServer/0", {
+      			outFields: ["x"],
+      			infoTemplate: new InfoTemplate("Campsite Name", "Campsite Name: ${Descript} </br>Type: ${FeatType}</br>")
+      		}),
+      		outFields: ["Descript","FeatType"],
+      		displayField: "Descript",
+      		suggestionTemplate: "${Descript}: ${FeatType}",
+      		names: "Campsite",
+      		placeholder: "Enter Campsite Name",
+      		enableSuggestions: true
+      	}],
+      	map:map
+      }, "searchC");
+      searchC.startup();
       
       //Basemap Gallery 
          var basemapGallery = new BasemapGallery({

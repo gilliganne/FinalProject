@@ -45,7 +45,7 @@ require([
                 //Initiate Map 
          var map = new Map("map", {
         basemap: "topo",
-        center: [-103.20, 29.32],
+        center: [-103.20, 29.5],
         zoom: 10
       });
          var basemapGallery = new BasemapGallery({
@@ -66,13 +66,13 @@ legend.startup();
 
 //create trails infotemplate
       var trailsInfo = new InfoTemplate();
-      trailsInfo.setTitle("<b>${TRLNAME}</b>");
-      trailsInfo.setContent("${TRLNAME} is ${Miles} miles long.");
+      trailsInfo.setTitle("<b>${TRLNAME} Trail</b>");
+      trailsInfo.setContent("<b>${TRLNAME} Trail <br><br></b> <b>Distance:</b> ${Miles} miles <br> <b>Development:</b> ${TRLCLASS} <br> <b>Average Slope:</b> ${Avg_Slope} <br> <b>Maximum Slope:</b> ${Max_Slope}");
       var trailsFeat = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0",
       {
       mode: FeatureLayer.MODE_ONDEMAND,
       infoTemplate: trailsInfo,
-      outFields: ["TRLNAME", "Miles"]                   
+      outFields: ["TRLNAME", "Miles", "TRLCLASS", "Avg_Slope", "Max_Slope"]                   
 		        });
 
 //add trails to map
@@ -82,7 +82,7 @@ legend.startup();
 
 	var campInfo = new InfoTemplate();
 	campInfo.setTitle("<b>${Descript}</b>");
-	campInfo.setContent("Type: ${FeatType}");
+	campInfo.setContent("<b>${Descript}</b> <br><br><b>Type:</b> ${FeatType}");
 	var campFeat = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/BIBE_Primitive_Campsite/FeatureServer/0",
 	{
 	mode: FeatureLayer.MODE_ONDEMAND,
@@ -96,7 +96,7 @@ legend.startup();
 
 	var visitorInfo = new InfoTemplate();
 	visitorInfo.setTitle("<b>${NAME1_} Visitor Center</b>");
-	visitorInfo.setContent("Travel to one of the Visitor Centers to pay park entrance fees. Backcountry and river permits are also issued here. Additionally, Visitor Centers are a good place to gather extra information on the park, seek advice from one of the Park Rangers, or browse the gift shop!");
+	visitorInfo.setContent("<b>${NAME1_} Visitor Center</b><br> <br>Travel to one of the Visitor Centers to pay park entrance fees. Backcountry and river permits are also issued here. Additionally, Visitor Centers are a good place to gather extra information on the park, seek advice from one of the Park Rangers, or browse the gift shop!");
 	var visitorFeat = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/BIBE_Visitor_Centers/FeatureServer/0",
          {
 	mode: FeatureLayer.MODE_ONDEMAND,
@@ -109,7 +109,7 @@ legend.startup();
 //create roads infoTemplate
 	var roadsInfo = new InfoTemplate();
 	roadsInfo.setTitle("<b>${RDNAME}</b>");
-	roadsInfo.setContent("Surface Type: ${RDSURFACE}");
+	roadsInfo.setContent("<b>${RDNAME}</b> <br><br> <b>Surface Type:</b> ${RDSURFACE}");
 	var roadsFeat = new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/BIBE_Roads/FeatureServer/0",
 	{
 	mode: FeatureLayer.MODE_ONDEMAND,

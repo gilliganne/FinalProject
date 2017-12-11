@@ -1,6 +1,6 @@
 /* Tags */
 body {
-	background-color: rgb(153, 102, 51); 
+	background-color: rgb(188, 172, 201); 
 }
 /* Classes */
 .title {
@@ -28,10 +28,9 @@ body {
 	position: absolute;
 	height: 5%;
 	width: 100%;
-	top: 48%;
+	top: 46%;
 	
 }
-
 
 
 .leftnav {
@@ -41,22 +40,30 @@ body {
 	background-color: rgb(188, 172, 201);
 	color: rgb(1, 122, 132);
 	width: 12%;
-    height: 65%;
+    	height: 65%;
 	position: absolute;
 	float: left;
-	top: 55%;
-	border: 2px solid black;
+	top: 53%;
 	}
 
-
-.content {
+#content {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	z-index: 0;
 	position: absolute;
-	top: 55%;
-	right: 0%;
-	width: 88%;
+	top: 53%;
 	height: 95%;
-	border: none;
+	left: 2%;
+	
+}
+.content {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	z-index: 0;
+	position: absolute;
+	top: 52.4%;
+	right: 0%;
+	width: 87.6%;
+	height: 95%;
+	border: 2px solid black;
 	
 }
 .elevationProfile {
@@ -65,10 +72,18 @@ body {
 	right: 15%;
 	width: 100%;
 	height: 100%;
-	border: 6px solid black;
 }
-
-	.bottomnavigation {
+p {
+	text-align: justify;
+	width: 35%;
+	}
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+.bottomnavigation {
 	text-align: center;
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	border-width: 100%;
@@ -79,14 +94,15 @@ body {
 	padding: 5px;
 	height: 5%;
 	width: 100%;
-	position: relative;
-	top: 700px;
-  }
+	position: absolute;
+	top: 3400px;
+ }
   .bottomcredits {
-  	position: relative;
-	top: 700px;
-	color: rgb(188, 172, 201);
+  	position: absolute;
+	top: 3480px;
+	color: black;
 	letter-spacing: 4px;
+	text-align: center;
   }
 	
 /* Id */

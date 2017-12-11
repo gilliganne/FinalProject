@@ -1,4 +1,5 @@
 
+
 //	* Geo4422/5408 Big Bend Webmapping Project 2017
 // 	* Kenneth Gustafson, Benjamin Griffith, Anne Gilligan, Kelly Baker, Timmy Szpakowski
 
@@ -57,11 +58,11 @@ require([
       	sources: [{
       		featureLayer: new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/BIBE_Trails/FeatureServer/0", {
       			outFields: ["x"],
-      			infoTemplate: new InfoTemplate("Trail Name", "Trail Name: ${TRLNAME} </br>Miles: ${Miles}</br>")
+      			infoTemplate: new InfoTemplate("<b>${TRLNAME} Trail</b>","<b>${TRLNAME} Trail <br><br></b> <b>Distance:</b> ${Miles} miles <br> <b>Development:</b> ${TRLCLASS} <br> <b>Average Slope:</b> ${Avg_Slope} <br> <b>Maximum Slope:</b> ${Max_Slope}")
       		}),
-      		outFields: ["TRLNAME","Miles"],
+      		outFields: ["TRLNAME", "Miles", "TRLCLASS", "Avg_Slope", "Max_Slope"],
       		displayField: "TRLNAME",
-      		suggestionTemplate: "${TRLNAME}: ${MILES}",
+      		suggestionTemplate: "${TRLNAME}",
       		names: "Trail Names",
       		placeholder: "Enter Trail Name",
       		enableSuggestions: true
@@ -75,12 +76,12 @@ require([
       	sources: [{
       		featureLayer: new FeatureLayer("https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/BIBE_Primitive_Campsite/FeatureServer/0", {
       			outFields: ["x"],
-      			infoTemplate: new InfoTemplate("Campsite Name", "Campsite Name: ${Descript} </br>Type: ${FeatType}</br>")
+      			infoTemplate: new InfoTemplate("<b>${Descript}</b>", "<b>${Descript}</b> <br><br><b>Type:</b> ${FeatType}")
       		}),
       		outFields: ["Descript","FeatType"],
       		displayField: "Descript",
-      		suggestionTemplate: "${Descript}: ${FeatType}",
-      		names: "Campsite",
+      		suggestionTemplate: "${Descript}",
+      		names: "<b>${Descript}</b>",
       		placeholder: "Enter Campsite Name",
       		enableSuggestions: true
       	}],

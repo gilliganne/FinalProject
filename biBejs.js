@@ -1,3 +1,4 @@
+
 //	* Geo4422/5408 Big Bend Webmapping Project 2017
 // 	* Kenneth Gustafson, Benjamin Griffith, Anne Gilligan, Kelly Baker, Timmy Szpakowski
 
@@ -209,7 +210,6 @@ legend.startup();
                         map: map,
                         chartOptions: chartOptions,
                         profileTaskUrl: "http://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer/Profile/execute",
-                                        
                         scalebarUnits: Units.MILES
                     };
 					
@@ -226,5 +226,19 @@ legend.startup();
                     tb.on("draw-end", addGraphic);
                     tb.activate(toolName);
                     map.disableMapNavigation();
+                   }
+                    //Initialize and draw elevation profile graph
+                function addGraphic(evt) {
+                    //Deactivate the toolbar and clear existing graphics
+                    tb.deactivate();
+                    map.enableMapNavigation();
+                    var symbol = lineSymbol;
+                    map.graphics.add(new Graphic(evt.geometry, symbol));
+                    epWidget.set("profileGeometry", evt.geometry);
+                    var sel = dom.byId("unitsSelect");
+                    if (sel) {
+                        var val = sel.options[sel.selectedIndex].value;
+                        epWidget.set("measureUnits", val);
+                    }
                 }
-             });
+            });

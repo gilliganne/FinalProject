@@ -24,7 +24,7 @@
  		<script src="https://js.arcgis.com/3.22/"></script>
   		<script type="text/javascript" src="biBejs.js"></script>
   	</head>
-<body>
+<body class="claro">
 			<!-- Top Navigation -->
 		<div class="logo">
 			<img src="bigBendsunsetLogo.jpg" style width="100%" height="450px" align="center"></img>
@@ -53,7 +53,8 @@
          	       Choose a drawing method:
           	      <button id="Polyline" type="button">Polyline</button>
          	       <button id="FreehandPolyline" type="button">Freehand Polyline</button> 
-             		   	<p></p>
+             		   	<br/>
+             		   	<br/>
               	        Select unit measure:    
                 	      	<select id="unitsSelect">
                       		  	<option value="esriKilometers">Kilometers</option>
@@ -62,63 +63,49 @@
                             	<option value="esriFeet">Feet</option>
                         	</select>
                     	        <br/>
-                	           
-             	</div>
-             	
-            </div>
-            
-		</nav>
-
-			
-		
-		<nav>
-			
+                </div>
+             </div>
+         </nav>
+         <nav>
 			<div class="content">
-				<body class="claro"> 
-  					<div data-dojo-type="dijit/layout/BorderContainer" 
-       					data-dojo-props="design:'headline', gutters:false" 
-       					style="width:100%;height:100%;margin:0;">
-				<div id="map" 
-         			data-dojo-type="dijit/layout/ContentPane" 
-         			data-dojo-props="region:'leading'" >
+				 <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false" style="width:100%;height:100%;margin:0;">
+			<div id="map" data-dojo-type="dijit/layout/ContentPane"	data-dojo-props="region:'leading'">
+      		</div>
+				<div style="position:absolute; right:0px; top:0px; z-Index:999;">
+       				<div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Switch Basemap', open:false">
+          				<div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
+            				<div id="basemapGallery"> </div>
+           				</div>
+        			</div>
       			</div>
-		
-						<div style="position:absolute; right:0px; top:0px; z-Index:999;">
-       						<div data-dojo-type="dijit/TitlePane" 
-             					data-dojo-props="title:'Switch Basemap', open:false">
-          					<div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
-            	<div id="basemapGallery"> </div>
-            
-          					</div>
-        					</div>
-      					</div>
-      						<!-- Define the elevation profile output graph container division -->
+      				<!-- Define the elevation profile output graph container division -->
             <div id= "elevationProfile">
-				<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'" style="background-color: #baaa91;">
+				<div data-dojo-type="dijit/layout/ContentPane"  data-dojo-props="region:'bottom'" style="background-color: #baaa91;">
                 	<div id="profileChartNode"></div>
             	</div>
            </div> 
     			<div data-dojo-type="dijit/layout/ContentPane" title="Elevation" style="background-color: #f0e5d3;">
                 </div>
-					</div>
+				</div>
 						<!-- Legend -->
 						<div style="position:absolute; right:0px; top:30px; z-Index:999;">
        						<div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Legend', open:false">
           					<div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
-					<div id="legendDiv"> </div>
-				</div>
-				</div>
-				</div>
+								<div id="legendDiv"> </div>
+							</div>
+							</div>
+						</div>
+			</div>
 							<!-- Bottom Credits -->
 		<div class="homecredits" align="center">
-		<div class = "copy">Copyright 2017    
-			    </div>
-			All rights reserved
-			<div class= "time"><script>
+			<div class = "copy">Copyright 2017</div>
+				All rights reserved
+			<div class= "time">
+				<script>
 				var d = new Date();
-				document.write(d);			</script>
-
-		</div>
+				document.write(d);
+				</script>
+			</div>
 		</div>
 	</body>	
 </html>

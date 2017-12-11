@@ -15,7 +15,7 @@ body {
 	}
 
 .topnavigation {
-	z-index: -1;
+	z-index: 0;
 	text-align: center;
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	width: 100%
